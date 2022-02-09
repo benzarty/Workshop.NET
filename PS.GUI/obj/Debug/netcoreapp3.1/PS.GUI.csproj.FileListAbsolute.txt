@@ -1,0 +1,57 @@
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.exe
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.deps.json
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.runtimeconfig.json
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.runtimeconfig.dev.json
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.dll
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.pdb
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.Domain.dll
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.Services.dll
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.Domain.pdb
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.Services.pdb
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.csproj.AssemblyReference.cache
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.AssemblyInfoInputs.cache
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.AssemblyInfo.cs
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.csproj.CoreCompileInputs.cache
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.csproj.CopyComplete
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.dll
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.pdb
+C:\Users\my\source\repos\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.genruntimeconfig.cache
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.exe
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.deps.json
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.runtimeconfig.json
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.runtimeconfig.dev.json
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.dll
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.pdb
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.Domain.dll
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.Services.dll
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.Domain.pdb
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.Services.pdb
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.csproj.AssemblyReference.cache
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.AssemblyInfoInputs.cache
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.AssemblyInfo.cs
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.csproj.CoreCompileInputs.cache
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.csproj.CopyComplete
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.dll
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.pdb
+C:\Users\Alaa\Downloads\Compressed\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.genruntimeconfig.cache
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.exe
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.deps.json
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.runtimeconfig.json
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.runtimeconfig.dev.json
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.dll
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.GUI.pdb
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.Domain.dll
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.Services.dll
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.Domain.pdb
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.Services.pdb
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.csproj.AssemblyReference.cache
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.AssemblyInfoInputs.cache
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.AssemblyInfo.cs
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.csproj.CoreCompileInputs.cache
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.csproj.CopyComplete
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.dll
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.pdb
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.genruntimeconfig.cache
