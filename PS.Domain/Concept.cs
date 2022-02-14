@@ -4,7 +4,8 @@ using System.Text;
 
 namespace PS.Domain
 {
-    //sealed pour bloquer l heritages
+ //public sealed class  <name>
+    // sealed pour bloquer l'héritage .
     public  abstract class Concept
     {
         public abstract void getDetails();

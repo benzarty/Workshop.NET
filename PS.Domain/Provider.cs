@@ -9,7 +9,10 @@ namespace PS.Domain
         //public string ConfirmPassword { get; set; }
         public DateTime DateCreated { get; set; }
 
+
         public string Email { get; set; }
+
+
 
         public int Id { get; set; }
 
@@ -64,11 +67,16 @@ namespace PS.Domain
         {
             isApproved = (password == confirmation);
         }
+
+        //polymorphisme
+
       //  public bool Login(String user,String password)
      //   {
      //       return user == UserName && password==Password;
            
      //   }
+
+
 
         public bool Login(String user, String password,String email=null)
         {
@@ -90,6 +98,10 @@ namespace PS.Domain
             Console.WriteLine(p);
         }
 
+
+        /**
+         * displays products selon l'attribut passé 
+         */
         public void GetProdcuts(string filtertype,string filterValue)
         {
             switch(filtertype)
@@ -97,15 +109,16 @@ namespace PS.Domain
                 case "Name":
                     foreach(Product p in Products)
                         if(p.Name.Equals(filterValue))
-                            Console.WriteLine(p);
+                         Console.WriteLine(p);
+                    break;
 
-                break;
+
                 case "DateProd":
                     foreach (Product p in Products)
                         if (p.DateProd == DateTime.Parse(filterValue))
                              Console.WriteLine(p);
 
-                break;
+                    break;
 
                 case "Price":
                     foreach (Product p in Products)

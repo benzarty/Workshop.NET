@@ -16,11 +16,11 @@ namespace PS.Domain
         public string StreetAdress { get; set; }
 
         public override void GetMyType()
- //tenajem tena7ihom ovveride wel virtual (polymorphisme)
+ //tenajem tena7ihom ovveride wel virtual 
         {
-            base.GetMyType();
+            base.GetMyType();  // pour hériter console.write du parentk.
 
-            Console.WriteLine(" chemical");
+            Console.WriteLine(" chemical");  //yafichi meta3 base wel jedida 
         }
     }
 }

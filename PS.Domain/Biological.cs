@@ -14,11 +14,11 @@ namespace PS.Domain
 
         public string Herbs { get; set; }
 
-        public void GetMyType()
-
+        public override void GetMyType()
+            //heritage
         {
             base.GetMyType();
-            Console.WriteLine("biological");
+            Console.Write("biologique\n");
         }
     }
 }

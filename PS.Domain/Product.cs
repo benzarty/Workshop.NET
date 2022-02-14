@@ -30,8 +30,10 @@ namespace PS.Domain
 
         public override string ToString()
         {
-            return "name : " + Name + " description : "+Description + " date : " +DateProd;
+            return "name : " + Name + " description : "+Description + " dateeeeee : " +DateProd;
         }
+
+        //         * forcer le passage par reference /
 
         public void Calculer(int a , int b ,ref int c)
         {
