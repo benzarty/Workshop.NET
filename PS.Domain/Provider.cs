@@ -1,26 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace PS.Domain
 {
     public class Provider:Concept
     {
+
+
         //public string ConfirmPassword { get; set; }
-        public DateTime DateCreated { get; set; }
+         public DateTime DateCreated { get; set; }
 
 
         public string Email { get; set; }
 
 
+        [Key]
+        public int ProviderKey { get; set; }
 
-        public int Id { get; set; }
 
         public Boolean IsApproved { get; set; }
 
 
         //public string Paswword { get; set; }
         private string password;
+
+        [DataType(DataType.Password)]
+        [Required(ErrorMessage ="required")]
+        [MinLength(8,ErrorMessage ="min lenghy 8 char")]
         public string Password
         {
             get { return password; }
@@ -34,6 +43,12 @@ namespace PS.Domain
             }
         }
         private string confirmPassword;
+
+        [DataType(DataType.Password)]
+        [Required(ErrorMessage = "required")]
+        [MinLength(8, ErrorMessage = "min lenghy 8 char")]
+        [NotMapped]
+        [Compare("password",ErrorMessage ="must match password")]  //ta5rar fi ay wa7da min methodes
         public string ConfirmPassword
         {
             get { return confirmPassword; }
@@ -61,20 +76,23 @@ namespace PS.Domain
             //{
             //    p.isApproved = false;
             //}
+            //houni par refrence yetsama ahawka 3leh ca changé 
             p.IsApproved = (p.password == p.confirmPassword);
         }
-        public static void SetIsApproved(string password, string confirmation, bool isApproved)
+        public static void SetIsApproved(string password, string confirmation, Boolean IsApproved)
         {
-            isApproved = (password == confirmation);
+            // IsApproved = password.Equals(confirmation);
+            IsApproved = (password == confirmation);
+            //to9e3ed false 5ater passage par valuer ( on a passé des valeurs ) ya5le9 image ba3ed ma 5edemena biha yarja3 lil aslou(garde sa vameur initial
         }
 
         //polymorphisme
 
-      //  public bool Login(String user,String password)
-     //   {
-     //       return user == UserName && password==Password;
-           
-     //   }
+        //  public bool Login(String user,String password)
+        //   {
+        //       return user == UserName && password==Password;
+
+        //   }
 
 
 

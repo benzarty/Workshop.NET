@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.Domain", "PS.Domain\PS.Domain.csproj", "{DCE59DA0-652F-4C42-B69E-EC476C7B768E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PS.Domain", "PS.Domain\PS.Domain.csproj", "{DCE59DA0-652F-4C42-B69E-EC476C7B768E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.Services", "PS.Services\PS.Services.csproj", "{BDCA9A22-EF4D-4ABE-9A95-C84920C5247B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PS.Services", "PS.Services\PS.Services.csproj", "{BDCA9A22-EF4D-4ABE-9A95-C84920C5247B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.GUI", "PS.GUI\PS.GUI.csproj", "{F8FF8E5A-39C2-482C-8F82-F11676C182F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PS.GUI", "PS.GUI\PS.GUI.csproj", "{F8FF8E5A-39C2-482C-8F82-F11676C182F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.data", "PS.data\PS.data.csproj", "{FA6B1689-54F1-4C2E-B269-E4D80854840A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{F8FF8E5A-39C2-482C-8F82-F11676C182F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8FF8E5A-39C2-482C-8F82-F11676C182F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8FF8E5A-39C2-482C-8F82-F11676C182F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA6B1689-54F1-4C2E-B269-E4D80854840A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA6B1689-54F1-4C2E-B269-E4D80854840A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA6B1689-54F1-4C2E-B269-E4D80854840A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA6B1689-54F1-4C2E-B269-E4D80854840A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

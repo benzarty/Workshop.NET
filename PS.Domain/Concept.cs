@@ -8,6 +8,6 @@ namespace PS.Domain
     // sealed pour bloquer l'héritage .
     public  abstract class Concept
     {
-        public abstract void getDetails();
+        public abstract void getDetails(); //mathabik method tebda majus
     }
 }

@@ -9,10 +9,20 @@ namespace PS.Services
     public class ManageProvider
     {
         //tawa bech ne5demou kil 3ebed
+        /**
+  * LinQ ( ychabah l sql)
+  * 
+  * Methode prédefinis (lambda expressions)
+  * 
+ */
+        //delegue : pointeur vers des methodes (ay mthodes/anonyme) vers une signature fix (2 type : func avec retour /action sans retour ):n
+        //a3melou traitement w affictiweh lil delegue héthéké(des méthodes qui ont la meme signature lezem )
+        
+
 
         public List<Provider> providers { get; set; } = new List<Provider>();
        public List<Provider> GetProviderByName(string name)
-        {//bech ne5demou bil link : sql inversé   //link teraja3 par default enumerable
+        {//bech ne5demou bil link : sql inversé   //link teraja3 par default enumerable donc zidouha tolist()
             //List<Provider> req= (from p in providers
             //                    where p.UserName.Contains(name)
             //                    select p).ToList();
@@ -45,7 +55,7 @@ namespace PS.Services
             var req2 = providers.Where(p => p.UserName.Contains(name)).Select(p => (p.Email,p.UserName));
                  foreach(var p in req2)
                   Console.WriteLine(p);
-
+                 //testé jaweha behi
         }
         public Provider GetFirstProviderByName(string name)
         {
@@ -55,7 +65,6 @@ namespace PS.Services
                      return req.First();
         }
 
-        //delegue : pointeur vers des methodes vers une signature fix (2 type : func avec retour /action sans retour )
 
 
     }

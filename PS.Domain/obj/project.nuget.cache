@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "R60NfrGpIfeIh16if/rlsxhdn8bpgDbC/tx3kI9/J/vJL0vgSxF2sXaohJVkLKJMvYHhcFw4mdoPg0PhVoddDw==",
+  "dgSpecHash": "TKQToVXq+mBC7LefW0ely+Aj7OVmqQiUIO0Prx5066NKBHyFXbl5JOG0GvO/dz0ZDm4+MP+7qfsjjAi7OL0YMw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Morning Beautiful\\Desktop\\Projet4eme\\.net\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Morning Beautiful\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.11\\microsoft.entityframeworkcore.abstractions.5.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

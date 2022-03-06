@@ -1,4 +1,5 @@
-﻿using PS.Domain;
+﻿using PS.data;
+using PS.Domain;
 using PS.Services;
 using System;
 using System.Collections.Generic;
@@ -9,12 +10,29 @@ namespace PS.GUI
     {
         static void Main(string[] args)
         {
+
+            Category c = new Category 
+            
+            {
+
+                Name= "fraise"
+
+            }
+                ;
+
+          
+
+
+
             Product p1 = new Product();
             p1.Name = "Pomme";
             p1.DateProd = new DateTime(2012, 11, 23);
-           //   Console.WriteLine(p1.ToString());
+            //   Console.WriteLine(p1.ToString());
 
-           // Console.WriteLine(p1.Name.ToString());
+            // Console.WriteLine(p1.Name.ToString());
+
+
+         
 
             //intialiseur d'objet : 
             Product p2 = new Product
@@ -29,40 +47,41 @@ namespace PS.GUI
 
             };
 
+            p2.Category = c;
+          //  Console.WriteLine(p2.IntCategory(c));
 
 
-          
 
 
             Provider provider = new Provider
             {
-                Password = "adcead",
-                ConfirmPassword = "adcead",
-                UserName="user1",
-                Email="user1@gmail.com",
-                IsApproved=false
+                Password = "aaaaaa",
+                ConfirmPassword = "aaaaaa",
+                UserName= "adcead",
+                Email= "adcead",
+                
                 //get w set yede5mou min 8ir ma te9olehom
             };
-            Provider provider2 = new Provider
-            {
-                Password = "adcead",
-                ConfirmPassword = "adcead",
-                UserName = "user1",
-                Email = "bbbbb@gmail.com",
-                IsApproved = false
-                //get w set yede5mou min 8ir ma te9olehom
-            };
+            //Provider provider2 = new Provider
+            //{
+            //    Password = "adcead",
+            //    ConfirmPassword = "adcead",
+            //    UserName = "user2",
+            //    Email = "bbbbb@gmail.com",
+            //    IsApproved = true
+            //    //get w set yede5mou min 8ir ma te9olehom
+            //};
 
 
-            //  Console.WriteLine(provider.IsApproved);
+           //  Console.WriteLine(provider.IsApproved);
             //passage par reference
-            Provider.SetIsApproved(provider);
+          //  Provider.SetIsApproved(provider);
            // Console.WriteLine(provider.IsApproved);
 
 
             //passage par valeur
-             Provider.SetIsApproved(provider.Password, provider.ConfirmPassword, provider.IsApproved);
-           // Console.WriteLine(provider.IsApproved);
+            // Provider.SetIsApproved(provider.Password, provider.ConfirmPassword, provider.IsApproved);  //héthi 7abetech
+            //Console.WriteLine(provider.IsApproved);
             //cw tab tab
 
             //forcer le passage par ref
@@ -93,27 +112,47 @@ namespace PS.GUI
             provider.Products.Add(p1);
 
             provider.Products.Add(p2);
-         // provider.getDetails();   //name user1 ??????????????????????????????
+         // provider.getDetails();   
 
-        // provider.GetProdcuts("Name", "Pomme");
-      //   provider.GetProdcuts("DateProd", "2012/11/23");
+      //   provider.GetProdcuts("Name", "Pomme");
+      //  provider.GetProdcuts("DateProd", "2012/11/23");
 
-          //  Console.WriteLine("DisplayUsernameAndEmail");
+       //     Console.WriteLine("DisplayUsernameAndEmail");
            ManageProvider mp = new ManageProvider();
            mp.providers.Add(provider);
-            mp.providers.Add(provider2);
+            //   mp.providers.Add(provider2);
 
-          //  mp.DisplayUsernameAndEmail("user1");
+            //  mp.DisplayUsernameAndEmail("user2");
 
-            //delegue test
-            ManageProduct mprod = new ManageProduct();
-            mprod.lsProduct = new List<Product> { p1, p2 };
-            foreach(Product prr in mprod.FindProduct('P'))
+            ////delegue test
+            //ManageProduct mprod = new ManageProduct();
+            //mprod.lsProduct = new List<Product> { p1, p2 };
+            //foreach (Product prr in mprod.FindProduct('P'))
 
-            {
-                Console.WriteLine(prr);
+            //{
+            //    Console.WriteLine(prr);
 
-            }
+            //}
+
+            ////  les methode d extension
+            //string s = "bonjour";
+            //Console.WriteLine(s.ToUpper());
+
+            //s.UpperName();  //string extension
+
+
+
+            //provider.UpperNameProvider();
+            //Console.WriteLine(provider.UserName);
+
+
+            //ki te7eb ta5le9 table min 8ir immigration ama moch mansou7 biha
+            PSContext ctx = new PSContext();
+            ctx.Products.Add(p1);
+            ctx.Chemicals.Add(chemical);
+            ctx.Biologicals.Add(biological);
+
+            ctx.SaveChanges();
         }
     }
 }
