@@ -107,3 +107,5 @@ C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\
 C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.data.dll
 C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\PS.data.pdb
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\Morning Beautiful\Desktop\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll

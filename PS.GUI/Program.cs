@@ -30,9 +30,9 @@ namespace PS.GUI
             //   Console.WriteLine(p1.ToString());
 
             // Console.WriteLine(p1.Name.ToString());
+            Category c1= new Category { Name = "legume" };
 
-
-         
+            p1.Category = c1;
 
             //intialiseur d'objet : 
             Product p2 = new Product
@@ -102,13 +102,17 @@ namespace PS.GUI
             //tester method getmytype
             Product product = new Product();
             Chemical chemical = new Chemical();
+
+            chemical.Name = "azzaz";
             Biological biological = new Biological();
 
+            biological.Name = "zzeze";
+                
            // product.GetMyType();
            // chemical.GetMyType();
            // biological.GetMyType();
 
-           // provider.Products = new List<Product>() { p1};
+            // provider.Products = new List<Product>() { p1};
             provider.Products.Add(p1);
 
             provider.Products.Add(p2);
@@ -149,10 +153,17 @@ namespace PS.GUI
             //ki te7eb ta5le9 table min 8ir immigration ama moch mansou7 biha
             PSContext ctx = new PSContext();
             ctx.Products.Add(p1);
-            ctx.Chemicals.Add(chemical);
-            ctx.Biologicals.Add(biological);
-
+            // ctx.Chemicals.Add(chemical);
+            // ctx.Biologicals.Add(biological);
             ctx.SaveChanges();
+
+            foreach (Product pr in ctx.Products)
+            {
+                Console.WriteLine("prodcut"+pr.Name+"category"+pr.Category.Name);
+            }
+
+
+            Console.WriteLine("objet insréé");
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Morning Beautiful\\Desktop\\Projet4eme\\.net\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj": {}
+    "C:\\Users\\Morning Beautiful\\Desktop\\Files\\Projet4eme\\.net\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Morning Beautiful\\Desktop\\Projet4eme\\.net\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj": {
+    "C:\\Users\\Morning Beautiful\\Desktop\\Files\\Projet4eme\\.net\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Morning Beautiful\\Desktop\\Projet4eme\\.net\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Morning Beautiful\\Desktop\\Files\\Projet4eme\\.net\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj",
         "projectName": "PS.Domain",
-        "projectPath": "C:\\Users\\Morning Beautiful\\Desktop\\Projet4eme\\.net\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj",
+        "projectPath": "C:\\Users\\Morning Beautiful\\Desktop\\Files\\Projet4eme\\.net\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj",
         "packagesPath": "C:\\Users\\Morning Beautiful\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Morning Beautiful\\Desktop\\Projet4eme\\.net\\ProductStoreTWIN2\\PS.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Morning Beautiful\\Desktop\\Files\\Projet4eme\\.net\\ProductStoreTWIN2\\PS.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Morning Beautiful\\AppData\\Roaming\\NuGet\\NuGet.Config",

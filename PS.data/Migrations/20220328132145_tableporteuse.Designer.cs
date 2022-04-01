@@ -10,8 +10,8 @@ using PS.data;
 namespace PS.data.Migrations
 {
     [DbContext(typeof(PSContext))]
-    [Migration("20220228152941_hahah")]
-    partial class hahah
+    [Migration("20220328132145_tableporteuse")]
+    partial class tableporteuse
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,6 +21,27 @@ namespace PS.data.Migrations
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("PS.Domain.Achat", b =>
+                {
+                    b.Property<int>("ClientFK")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductFK")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateAchat")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("ClientFK", "ProductFK", "DateAchat");
+
+                    b.HasIndex("ProductFK");
+
+                    b.ToTable("Achats");
+                });
+
             modelBuilder.Entity("PS.Domain.Category", b =>
                 {
                     b.Property<int>("CategoryId")
@@ -29,11 +50,37 @@ namespace PS.data.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("CategoryId");
 
-                    b.ToTable("Categories");
+                    b.ToTable("myCategories");
+                });
+
+            modelBuilder.Entity("PS.Domain.Client", b =>
+                {
+                    b.Property<int>("Cin")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DateNaissance")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Prenom")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nom")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Cin");
+
+                    b.ToTable("Clients");
                 });
 
             modelBuilder.Entity("PS.Domain.Product", b =>
@@ -43,17 +90,13 @@ namespace PS.data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CategoryFK")
+                    b.Property<int?>("CategoryFK")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DateProd")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageName")
@@ -75,8 +118,6 @@ namespace PS.data.Migrations
                     b.HasIndex("CategoryFK");
 
                     b.ToTable("Products");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Product");
                 });
 
             modelBuilder.Entity("PS.Domain.Provider", b =>
@@ -119,7 +160,7 @@ namespace PS.data.Migrations
 
                     b.HasIndex("ProvidersProviderKey");
 
-                    b.ToTable("ProductProvider");
+                    b.ToTable("Providing");
                 });
 
             modelBuilder.Entity("PS.Domain.Biological", b =>
@@ -129,7 +170,7 @@ namespace PS.data.Migrations
                     b.Property<string>("Herbs")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasDiscriminator().HasValue("Biological");
+                    b.ToTable("Biological");
                 });
 
             modelBuilder.Entity("PS.Domain.Chemical", b =>
@@ -139,7 +180,26 @@ namespace PS.data.Migrations
                     b.Property<string>("LabName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasDiscriminator().HasValue("Chemical");
+                    b.ToTable("Chemical");
+                });
+
+            modelBuilder.Entity("PS.Domain.Achat", b =>
+                {
+                    b.HasOne("PS.Domain.Client", "Client")
+                        .WithMany("Achats")
+                        .HasForeignKey("ClientFK")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PS.Domain.Product", "Product")
+                        .WithMany("Achats")
+                        .HasForeignKey("ProductFK")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Client");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("PS.Domain.Product", b =>
@@ -147,8 +207,7 @@ namespace PS.data.Migrations
                     b.HasOne("PS.Domain.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryFK")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Category");
                 });
@@ -168,8 +227,23 @@ namespace PS.data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("PS.Domain.Biological", b =>
+                {
+                    b.HasOne("PS.Domain.Product", null)
+                        .WithOne()
+                        .HasForeignKey("PS.Domain.Biological", "ProductId")
+                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("PS.Domain.Chemical", b =>
                 {
+                    b.HasOne("PS.Domain.Product", null)
+                        .WithOne()
+                        .HasForeignKey("PS.Domain.Chemical", "ProductId")
+                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .IsRequired();
+
                     b.OwnsOne("PS.Domain.Adresse", "Adresse", b1 =>
                         {
                             b1.Property<int>("ChemicalProductId")
@@ -185,7 +259,7 @@ namespace PS.data.Migrations
 
                             b1.HasKey("ChemicalProductId");
 
-                            b1.ToTable("Products");
+                            b1.ToTable("Chemical");
 
                             b1.WithOwner()
                                 .HasForeignKey("ChemicalProductId");
@@ -197,6 +271,16 @@ namespace PS.data.Migrations
             modelBuilder.Entity("PS.Domain.Category", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("PS.Domain.Client", b =>
+                {
+                    b.Navigation("Achats");
+                });
+
+            modelBuilder.Entity("PS.Domain.Product", b =>
+                {
+                    b.Navigation("Achats");
                 });
 #pragma warning restore 612, 618
         }

@@ -8,6 +8,7 @@ namespace PS.Domain
 {
    public class Product
     {
+        public virtual List<Achat> Achats { get; set; }
 
         public int ProductId { get; set; }
 
@@ -30,16 +31,16 @@ namespace PS.Domain
         [Range(0,int.MaxValue)]
         public int Quantity { get; set; }
 
-        public String ImageName { get; set; }
+        public string ImageName { get; set; }
 
-        [ForeignKey("CategoryFK")]
+       // [ForeignKey("CategoryFK")]
 
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
 
-     //   [ForeignKey("Category")]
-        public int CategoryFK { get; set; }  //fil base 3emalt chay te9oulech 3liya //bech direct tewali tod5el houni id moch category.categoryid
-
-        public List<Provider> Providers { get; set; }
+       [ForeignKey("Category")]
+        public int? CategoryFK { get; set; }  //fil base 3emalt chay te9oulech 3liya //bech direct tewali tod5el houni id moch category.categoryid
+        //0 * 
+        public  virtual List<Provider> Providers { get; set; }
 
       //  public virtual ICollection<Provider> Providers { get; set; }  lazy loading : par default yejibled ken attribut normal lezem prodcut.providers bech yejibhom
 

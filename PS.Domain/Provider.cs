@@ -64,7 +64,7 @@ namespace PS.Domain
 
         public string UserName { get; set; }
 
-        public List<Product> Products { get; set; } = new List<Product>();
+        public virtual List<Product> Products { get; set; } = new List<Product>();
 
         public static void SetIsApproved(Provider p)
         {

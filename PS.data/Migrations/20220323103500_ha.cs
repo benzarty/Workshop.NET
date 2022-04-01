@@ -3,21 +3,21 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PS.data.Migrations
 {
-    public partial class hahah : Migration
+    public partial class ha : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Categories",
+                name: "myCategories",
                 columns: table => new
                 {
                     CategoryId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Categories", x => x.CategoryId);
+                    table.PrimaryKey("PK_myCategories", x => x.CategoryId);
                 });
 
             migrationBuilder.CreateTable(
@@ -49,7 +49,7 @@ namespace PS.data.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     ImageName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CategoryFK = table.Column<int>(type: "int", nullable: false),
+                    CategoryFK = table.Column<int>(type: "int", nullable: true),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Herbs = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LabName = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -60,15 +60,15 @@ namespace PS.data.Migrations
                 {
                     table.PrimaryKey("PK_Products", x => x.ProductId);
                     table.ForeignKey(
-                        name: "FK_Products_Categories_CategoryFK",
+                        name: "FK_Products_myCategories_CategoryFK",
                         column: x => x.CategoryFK,
-                        principalTable: "Categories",
+                        principalTable: "myCategories",
                         principalColumn: "CategoryId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProductProvider",
+                name: "Providing",
                 columns: table => new
                 {
                     ProductsProductId = table.Column<int>(type: "int", nullable: false),
@@ -76,15 +76,15 @@ namespace PS.data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductProvider", x => new { x.ProductsProductId, x.ProvidersProviderKey });
+                    table.PrimaryKey("PK_Providing", x => new { x.ProductsProductId, x.ProvidersProviderKey });
                     table.ForeignKey(
-                        name: "FK_ProductProvider_Products_ProductsProductId",
+                        name: "FK_Providing_Products_ProductsProductId",
                         column: x => x.ProductsProductId,
                         principalTable: "Products",
                         principalColumn: "ProductId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ProductProvider_Providers_ProvidersProviderKey",
+                        name: "FK_Providing_Providers_ProvidersProviderKey",
                         column: x => x.ProvidersProviderKey,
                         principalTable: "Providers",
                         principalColumn: "ProviderKey",
@@ -92,20 +92,20 @@ namespace PS.data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProductProvider_ProvidersProviderKey",
-                table: "ProductProvider",
-                column: "ProvidersProviderKey");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Products_CategoryFK",
                 table: "Products",
                 column: "CategoryFK");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Providing_ProvidersProviderKey",
+                table: "Providing",
+                column: "ProvidersProviderKey");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ProductProvider");
+                name: "Providing");
 
             migrationBuilder.DropTable(
                 name: "Products");
@@ -114,7 +114,7 @@ namespace PS.data.Migrations
                 name: "Providers");
 
             migrationBuilder.DropTable(
-                name: "Categories");
+                name: "myCategories");
         }
     }
 }

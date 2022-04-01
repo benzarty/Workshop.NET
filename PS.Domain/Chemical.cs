@@ -19,7 +19,7 @@ namespace PS.Domain
 
         public string LabName { get; set; }
 
-        public Adresse Adresse { get; set; }
+        public virtual Adresse Adresse { get; set; }
         public override void GetMyType()
  //tenajem tena7ihom ovveride wel virtual 
         {
