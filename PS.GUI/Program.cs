@@ -151,19 +151,24 @@ namespace PS.GUI
 
 
             //ki te7eb ta5le9 table min 8ir immigration ama moch mansou7 biha
-            PSContext ctx = new PSContext();
-            ctx.Products.Add(p1);
+            //   PSContext ctx = new PSContext();
+
+            ServiceProduct serviceProduct = new ServiceProduct();
+            ServiceCategory serviceCategory = new ServiceCategory();
+
+            serviceProduct.Add(p2);
+          //  ctx.Products.Add(p1);
             // ctx.Chemicals.Add(chemical);
             // ctx.Biologicals.Add(biological);
-            ctx.SaveChanges();
+          //  ctx.SaveChanges();
 
-            foreach (Product pr in ctx.Products)
+            foreach (Product pr in serviceProduct.GetAll())
             {
                 Console.WriteLine("prodcut"+pr.Name+"category"+pr.Category.Name);
             }
 
+            serviceProduct.Commit();
 
-            Console.WriteLine("objet insréé");
         }
     }
 }

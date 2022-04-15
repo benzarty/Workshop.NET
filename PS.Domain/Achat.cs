@@ -8,6 +8,8 @@ namespace PS.Domain
     public class Achat
     {
         public int Quantity { get; set; }
+        public int prix { get; set; }
+
         public DateTime DateAchat { get; set; }
 
         public virtual Client Client { get; set; }

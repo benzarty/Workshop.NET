@@ -6,7 +6,7 @@ using System.Text;
 namespace PS.Domain
 {
     public class Client
-    {
+    {//nafes client yechri méme produit ca ne se passe pas ahawka 3leh negedou haka(table porteuse de donnée ma3adech manymany)
         [Key]
         public int Cin { get; set; }
         public DateTime DateNaissance { get; set; }
@@ -17,5 +17,6 @@ namespace PS.Domain
 
 
         public virtual List<Achat> Achats { get; set; }
+
     }
 }
