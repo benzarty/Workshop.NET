@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+//synchroniser les transactions
 namespace PS.Data.Infrastructure
 {
     public class UnitOfWork : IUnitOfWork

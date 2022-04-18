@@ -1,33 +1,38 @@
 ﻿using PS.data;
+using PS.Data.Infrastructure;
 using PS.Domain;
+using ServicePattern;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace PS.Services
 {
-    public class ServiceProduct : IServiceProduct
+    public class ServiceProduct : Service<Product>, IServiceProduct
     {
-
-        PSContext ctx = new PSContext();
-        public void Add(Product P)
+        public void Deleteold()
         {
-            ctx.Products.Add(P);
+            Delete(p => (DateTime.Now -p.DateProd).TotalDays > 365);
         }
 
-        public void Commit()
+        public IEnumerable<Product> FindMost5ExpenseiceProds()
         {
-            ctx.SaveChanges();
+            return GetMany().OrderByDescending(p => p.Price).Take(5);//first
         }
 
-        public IEnumerable<Product> GetAll()
+        public IEnumerable<Product> GetProductsByClient(Client c)
         {
-return ctx.Products;
-                }
-
-        public void Remove(Product P)
-        {
-            ctx.Products.Remove(P);
+            ServiceAchat sa = new ServiceAchat();
+            return sa.GetMany(a => a.ClientFK == c.Cin).Select(a => a.Product);
         }
+
+        public float UnavalaibleProductPercentage()
+        {
+            int nbPorduct = GetMany().Count();
+            int nbUnavailable = GetMany(p => p.Quantity == 0).Count();
+            return (float) (nbUnavailable / nbPorduct) * 100;
+        }
+
     }
 }

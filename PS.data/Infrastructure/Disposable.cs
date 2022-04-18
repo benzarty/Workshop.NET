@@ -6,21 +6,22 @@ namespace PS.Data
 {
     public class Disposable : IDisposable
     {
-        private bool disposedValue;
+        //resource libré 
+        private bool disposed;
 
         private void Dispose(bool disposing)
         {
-            if (!disposedValue)
-            {
-                if (disposing)
+           
+                if (disposing && !disposed)
                 {
                     DisposeCore();
-                }
+                disposed = true;
 
-                // TODO: libérer les ressources non managées (objets non managés) et substituer le finaliseur
-                // TODO: affecter aux grands champs une valeur null
-                disposedValue = true;
             }
+
+            // TODO: libérer les ressources non managées (objets non managés) et substituer le finaliseur
+            // TODO: affecter aux grands champs une valeur null
+
         }
 
         protected virtual void DisposeCore()

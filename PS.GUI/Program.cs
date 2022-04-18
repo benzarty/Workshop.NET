@@ -162,10 +162,10 @@ namespace PS.GUI
             // ctx.Biologicals.Add(biological);
           //  ctx.SaveChanges();
 
-            foreach (Product pr in serviceProduct.GetAll())
-            {
-                Console.WriteLine("prodcut"+pr.Name+"category"+pr.Category.Name);
-            }
+            //foreach (Product pr in serviceProduct.GetAll())
+            //{
+            //    Console.WriteLine("prodcut"+pr.Name+"category"+pr.Category.Name);
+            //}
 
             serviceProduct.Commit();
 

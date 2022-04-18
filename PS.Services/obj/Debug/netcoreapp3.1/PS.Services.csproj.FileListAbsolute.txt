@@ -54,3 +54,5 @@ C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.Se
 C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.Services\obj\Debug\netcoreapp3.1\PS.Services.csproj.CopyComplete
 C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.Services\obj\Debug\netcoreapp3.1\PS.Services.dll
 C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.Services\obj\Debug\netcoreapp3.1\PS.Services.pdb
+C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.Services\bin\Debug\netcoreapp3.1\ServicePattern.dll
+C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.Services\bin\Debug\netcoreapp3.1\ServicePattern.pdb

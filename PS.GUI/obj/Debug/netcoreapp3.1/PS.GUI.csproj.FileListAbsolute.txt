@@ -182,3 +182,5 @@ C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.GU
 C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.dll
 C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.pdb
 C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\obj\Debug\netcoreapp3.1\PS.GUI.genruntimeconfig.cache
+C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\ServicePattern.dll
+C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.GUI\bin\Debug\netcoreapp3.1\ServicePattern.pdb

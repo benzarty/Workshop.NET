@@ -2195,13 +2195,27 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "PS.Domain": "1.0.0",
-          "PS.data": "1.0.0"
+          "PS.data": "1.0.0",
+          "ServicePattern": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PS.Services.dll": {}
         },
         "runtime": {
           "bin/placeholder/PS.Services.dll": {}
+        }
+      },
+      "ServicePattern/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "PS.data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ServicePattern.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ServicePattern.dll": {}
         }
       }
     }
@@ -7455,6 +7469,11 @@
       "type": "project",
       "path": "../PS.Services/PS.Services.csproj",
       "msbuildProject": "../PS.Services/PS.Services.csproj"
+    },
+    "ServicePattern/1.0.0": {
+      "type": "project",
+      "path": "../ServicePattern/ServicePattern.csproj",
+      "msbuildProject": "../ServicePattern/ServicePattern.csproj"
     }
   },
   "projectFileDependencyGroups": {

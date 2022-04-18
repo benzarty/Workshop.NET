@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PS.data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,7 +14,7 @@ namespace PS.Data.Infrastructure
         {
             get { return dataContext; }
         }
-        public DataBaseFactory() { dataContext = new PsContext(); }
+        public DataBaseFactory() { dataContext = new PSContext(); }
         protected override void DisposeCore()
         {
             if (dataContext != null)

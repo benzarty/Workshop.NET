@@ -1459,10 +1459,19 @@
       "PS.Services/1.0.0": {
         "dependencies": {
           "PS.Domain": "1.0.0",
-          "PS.data": "1.0.0"
+          "PS.data": "1.0.0",
+          "ServicePattern": "1.0.0"
         },
         "runtime": {
           "PS.Services.dll": {}
+        }
+      },
+      "ServicePattern/1.0.0": {
+        "dependencies": {
+          "PS.data": "1.0.0"
+        },
+        "runtime": {
+          "ServicePattern.dll": {}
         }
       }
     }
@@ -2401,6 +2410,11 @@
       "sha512": ""
     },
     "PS.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ServicePattern/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

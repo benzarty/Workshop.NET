@@ -2163,6 +2163,19 @@
         "runtime": {
           "bin/placeholder/PS.Domain.dll": {}
         }
+      },
+      "ServicePattern/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "PS.data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ServicePattern.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ServicePattern.dll": {}
+        }
       }
     }
   },
@@ -7378,12 +7391,18 @@
       "type": "project",
       "path": "../PS.Domain/PS.Domain.csproj",
       "msbuildProject": "../PS.Domain/PS.Domain.csproj"
+    },
+    "ServicePattern/1.0.0": {
+      "type": "project",
+      "path": "../ServicePattern/ServicePattern.csproj",
+      "msbuildProject": "../ServicePattern/ServicePattern.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "PS.Domain >= 1.0.0",
-      "PS.data >= 1.0.0"
+      "PS.data >= 1.0.0",
+      "ServicePattern >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7418,6 +7437,9 @@
             },
             "C:\\Users\\Morning Beautiful\\Desktop\\Files\\Projet4eme\\.net\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj": {
               "projectPath": "C:\\Users\\Morning Beautiful\\Desktop\\Files\\Projet4eme\\.net\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj"
+            },
+            "C:\\Users\\Morning Beautiful\\Desktop\\Files\\Projet4eme\\.net\\ProductStoreTWIN2\\ServicePattern\\ServicePattern.csproj": {
+              "projectPath": "C:\\Users\\Morning Beautiful\\Desktop\\Files\\Projet4eme\\.net\\ProductStoreTWIN2\\ServicePattern\\ServicePattern.csproj"
             }
           }
         }

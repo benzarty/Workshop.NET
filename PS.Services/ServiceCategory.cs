@@ -1,28 +1,40 @@
 ﻿using PS.data;
+using PS.Data.Infrastructure;
 using PS.Domain;
+using ServicePattern;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace PS.Services
 {
-    public class ServiceCategory : IServiceCategorycs
-    {
-        PSContext ctx = new PSContext();
+    public class ServiceCategory : Service<Category>, IServiceCategorycs
 
-        public void Add(Category P)
+    {
+        static DataBaseFactory dbf = new DataBaseFactory();
+        UnitOfWork uow = new UnitOfWork(dbf);
+
+
+
+
+        public void Add(Category c)
         {
-            ctx.Categories.Add(P);
+            uow.getRepository<Category>().Add(c);
+        }
+
+        public void Commit()
+        {
+            uow.Commit();
         }
 
         public IEnumerable<Category> GetAll()
         {
-            return ctx.Categories;
+            return uow.getRepository<Category>().GetAll();
         }
 
-        public void Remove(Category P)
+        public void Remove(Category c)
         {
-            ctx.Categories.Remove(P);
+            uow.getRepository<Category>().Delete(c);
         }
     }
 }
