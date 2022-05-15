@@ -11,9 +11,13 @@ namespace PS.Services
 {
     public class ServiceProduct : Service<Product>, IServiceProduct
     {
+        public ServiceProduct(IUnitOfWork uow) : base(uow)
+        {
+
+        }
         public void Deleteold()
         {
-            Delete(p => (DateTime.Now -p.DateProd).TotalDays > 365);
+            Delete(p => (DateTime.Now - p.DateProd).TotalDays > 365);
         }
 
         public IEnumerable<Product> FindMost5ExpenseiceProds()
@@ -23,7 +27,9 @@ namespace PS.Services
 
         public IEnumerable<Product> GetProductsByClient(Client c)
         {
-            ServiceAchat sa = new ServiceAchat();
+            DataBaseFactory dbf = new DataBaseFactory();
+            UnitOfWork uow = new UnitOfWork(dbf);
+            ServiceAchat sa = new ServiceAchat(uow);
             return sa.GetMany(a => a.ClientFK == c.Cin).Select(a => a.Product);
         }
 
@@ -31,7 +37,7 @@ namespace PS.Services
         {
             int nbPorduct = GetMany().Count();
             int nbUnavailable = GetMany(p => p.Quantity == 0).Count();
-            return (float) (nbUnavailable / nbPorduct) * 100;
+            return (float)(nbUnavailable / nbPorduct) * 100;
         }
 
     }

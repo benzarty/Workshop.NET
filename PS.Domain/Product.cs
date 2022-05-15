@@ -6,8 +6,14 @@ using System.Text;
 
 namespace PS.Domain
 {
+    public enum PakagingType
+    {
+        carton=0,
+        plastic=1
+    }
    public class Product
     {
+
         public virtual List<Achat> Achats { get; set; }
 
         public int ProductId { get; set; }
@@ -70,6 +76,7 @@ namespace PS.Domain
 
             Console.WriteLine("je suis un produit");
         }
+        public PakagingType PakagingType { get; set; } = 0;
 
     }
 }

@@ -11,30 +11,10 @@ namespace PS.Services
     public class ServiceCategory : Service<Category>, IServiceCategorycs
 
     {
-        static DataBaseFactory dbf = new DataBaseFactory();
-        UnitOfWork uow = new UnitOfWork(dbf);
-
-
-
-
-        public void Add(Category c)
+        public ServiceCategory(IUnitOfWork uow) : base(uow)
         {
-            uow.getRepository<Category>().Add(c);
-        }
 
-        public void Commit()
-        {
-            uow.Commit();
         }
-
-        public IEnumerable<Category> GetAll()
-        {
-            return uow.getRepository<Category>().GetAll();
-        }
-
-        public void Remove(Category c)
-        {
-            uow.getRepository<Category>().Delete(c);
-        }
+       
     }
 }

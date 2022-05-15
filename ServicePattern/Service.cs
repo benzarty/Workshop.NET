@@ -9,8 +9,11 @@ namespace ServicePattern
     public class Service<TEntity> : IService<TEntity> where TEntity : class
     {
 
-        static IDataBaseFactory factory = new DataBaseFactory();
-        static IUnitOfWork utwk = new UnitOfWork(factory);
+        private IUnitOfWork utwk;
+        public Service(IUnitOfWork uow)
+        {
+            utwk = uow;
+        }
         public virtual void Add(TEntity entity)
         {
             utwk.getRepository<TEntity>().Add(entity);
@@ -27,7 +30,7 @@ namespace ServicePattern
         {
             utwk.getRepository<TEntity>().Delete(where);
         }
-        public virtual TEntity GetById(long id)
+        public virtual TEntity GetById(int id)
         {
             return utwk.getRepository<TEntity>().GetById(id);
         }
@@ -57,7 +60,8 @@ namespace ServicePattern
             {
                 throw;
             }
-        }
-    }
 
+        }
+
+    }
 }

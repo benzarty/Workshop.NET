@@ -83,7 +83,7 @@ namespace PS.Services
 
         public double GetAveragePrice()
         {
-            return lsProduct.Average(p => p.Price); //ken bil mapda exression héthouma 
+            return lsProduct.Average(p => p.Price); 
         }
         public double GetMaxPrice()
         {

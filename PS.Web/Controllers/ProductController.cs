@@ -13,8 +13,16 @@ namespace PS.Web.Controllers
 {
     public class ProductController : Controller
     {
-        ServiceProduct sp = new ServiceProduct();
-        ServiceCategory sc = new ServiceCategory();
+        private IServiceProduct sp;
+        private IServiceCategorycs sc;
+        public ProductController(IServiceProduct sp, IServiceCategorycs sc)
+        {
+            this.sp = sp;
+            this.sc = sc;
+        }
+
+
+
 
         // GET: ProductController
         public ActionResult Index()
@@ -30,13 +38,13 @@ namespace PS.Web.Controllers
         // GET: ProductController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(sp.GetById(id));
         }
 
         // GET: ProductController/Create
         public ActionResult Create()
         {
-            ViewBag.CategoryFK = new SelectList(sc.GetMany(), "CategoryId","Name");
+            ViewBag.CategoryFK = new SelectList(sc.GetMany(), "CategoryId","Name"); //chnowa yesajel w theniya chnowa donnée affichiha
             return View();
         }
 
@@ -63,37 +71,40 @@ namespace PS.Web.Controllers
         // GET: ProductController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(sp.GetById(id));
         }
 
         // POST: ProductController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Product collection)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
 
+
+
+            sp.Update(collection);
+            sp.Commit();
+            return RedirectToAction(nameof(Index));
+
+
+        }
+        //fama zouz get  w post kahaw 
         // GET: ProductController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+
+            return View(sp.GetById(id));
         }
 
         // POST: ProductController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, Product collection)
         {
             try
             {
+                sp.Delete(sp.GetById(id));
+                sp.Commit();
                 return RedirectToAction(nameof(Index));
             }
             catch

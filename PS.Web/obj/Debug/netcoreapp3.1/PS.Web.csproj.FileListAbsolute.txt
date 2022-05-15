@@ -162,3 +162,8 @@ C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.We
 C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.Web\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
 C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\Create.cshtml.g.cs
+C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\Delete.cshtml.g.cs
+C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.cs
+C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\Details.cshtml.g.cs
+C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\_PartialDetails.cshtml.g.cs
+C:\Users\Morning Beautiful\Desktop\Files\Projet4eme\.net\ProductStoreTWIN2\PS.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\Indexxx.cshtml.g.cs

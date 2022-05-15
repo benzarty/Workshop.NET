@@ -110,6 +110,9 @@ namespace PS.data.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("Myname");
 
+                    b.Property<int>("PakagingType")
+                        .HasColumnType("int");
+
                     b.Property<double>("Price")
                         .HasColumnType("float");
 

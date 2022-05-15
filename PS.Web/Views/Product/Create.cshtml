@@ -1,5 +1,5 @@
 ﻿@model PS.Domain.Product
-
+@using PS.Domain
 @{
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -47,6 +47,11 @@
                 <div class="form-group">
                     <label asp-for="CategoryFK" class="control-label"></label>
                     <select asp-for="CategoryFK" class="form-control" asp-items="ViewBag.CategoryFK"></select>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PakagingType" class="control-label"></label>
+                    <select asp-for="PakagingType" class="form-control" asp-items="Html.GetEnumSelectList<PakagingType>()"></select>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Create" class="btn btn-primary" />

@@ -108,10 +108,7 @@ namespace PS.Domain
         public override void getDetails()
         {
             Console.WriteLine("nom"+UserName);
-            //  for(int i=0; i<Products.Count; i++)
-            //  {
-            //       Console.WriteLine(Products[i]);
-            // }
+      
             foreach(Product p in Products)
             Console.WriteLine(p);
         }

@@ -8,10 +8,7 @@ namespace PS.Services
 {
    public interface IServiceCategorycs :IService<Category>
     {
-        void Add(Category c);
-        void Remove(Category c);
-        IEnumerable<Category> GetAll();
-        void Commit();
+     
 
     }
 }

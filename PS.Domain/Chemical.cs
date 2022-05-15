@@ -12,11 +12,6 @@ namespace PS.Domain
       
 
 
-        //public Chemical(int productId, string name, double price, DateTime dateProd, string description, int quantity, Category category, List<Provider> providers) : base(productId, name, price, dateProd, description, quantity, category, providers)
-        //{
-
-        //}
-
         public string LabName { get; set; }
 
         public virtual Adresse Adresse { get; set; }
@@ -29,4 +24,3 @@ namespace PS.Domain
         }
     }
 }
-//interface c un contrat obligation  //classe abstraite pour appliquer polymorphisme 
